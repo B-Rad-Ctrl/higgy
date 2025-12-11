@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HIGGY BEARTHDAY TEW YEW!!!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Comic Sans MS", "Papyrus", cursive;
+      text-align: center;
+      overflow-x: hidden;
+      animation: bg-flash 2s infinite alternate;
+    }
+
+    @keyframes bg-flash {
+      0% { background: #ff00ff; }
+      25% { background: #00ffff; }
+      50% { background: #ffff00; }
+      75% { background: #ff8800; }
+      100% { background: #00ff00; }
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-shadow: 4px 4px 0 #000;
+      color: #ffffff;
+      margin-top: 30px;
+      animation: wobble 1s infinite;
+    }
+
+    @keyframes wobble {
+      0% { transform: rotate(-2deg); }
+      50% { transform: rotate(2deg) scale(1.05); }
+      100% { transform: rotate(-2deg); }
+    }
+
+    .sub {
+      font-size: 1.3rem;
+      color: #000;
+      padding: 0 10px;
+      background: rgba(255,255,255,0.5);
+      display: inline-block;
+      border: 3px dashed hotpink;
+      border-radius: 15px;
+      margin-bottom: 15px;
+    }
+
+    .emoji-row {
+      font-size: 2rem;
+      margin: 10px 0;
+    }
+
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      padding-bottom: 56.25%;
+      height: 0;
+      margin: 20px auto;
+      border: 8px ridge gold;
+      box-shadow: 0 0 30px #000;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .button-chaos {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 999px;
+      border: 4px double #000;
+      background: repeating-linear-gradient(
+        45deg,
+        #ff0000,
+        #ff0000 10px,
+        #00ff00 10px,
+        #00ff00 20px,
+        #0000ff 20px,
+        #0000ff 30px
+      );
+      color: #fff;
+      cursor: pointer;
+      animation: pulse 0.7s infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .popup {
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: yellow;
+      border: 4px solid red;
+      padding: 10px 20px;
+      font-weight: bold;
+      z-index: 9999;
+      transition: top 0.4s ease-out;
+    }
+
+    .popup.show {
+      top: 10px;
+    }
+
+    marquee {
+      font-size: 1.4rem;
+      font-weight: bold;
+      background: #000;
+      color: #0f0;
+      padding: 5px 0;
+      border-top: 4px solid #fff;
+      border-bottom: 4px solid #fff;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+
+
+  .gif-wrapper img {
+    max-width: 300px;   /* change this if you want it bigger/smaller */
+    border-radius: 15px;
+    border: 4px dotted hotpink;
+    box-shadow: 0 0 15px #000;
+  }
+
+  </style>
+</head>
+<body>
+
+  <!-- Pop-up banner -->
+  <div id="popup" class="popup">
+    higgy bearthday tew yew 🎂 (this website cost £9,999 to develop)
+  </div>
+
+  <h1>HAPPY BIRTHDAY, <span id="nameSpan">[FRIEND]</span>!!! 🎉</h1>
+
+  <p class="sub">
+    This extremely professional website was hand-crafted<br>
+    in 1 higgillion year. SAY THANK YOU!.
+  </p>
+
+  <div class="emoji-row">
+  🧌 😭 👽 🖖 🧌 😭 👽 🖖
+</div>
+
+
+  <!-- YouTube video -->
+  <div class="video-container">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/htP85AsPVZ4?si=4vMkUEJAlaCVMLia"
+      title="YouTube video player"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allow="accelerometer; autoplay 1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <button class="button-chaos" onclick="unleashChaos()">
+    CLICK ME FOR TO SEE BEN STILLER? 🎊
+  </button>
+
+  <div class="emoji-row" id="chaosZone">
+    <div class="tenor-gif-embed" data-postid="20187208" data-share-method="host" data-aspect-ratio="0.953125" data-width="100%"><a href="https://tenor.com/view/21-gif-20187208">21 GIF</a>from <a href="https://tenor.com/search/21-gifs">21 GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  </div>
+
+  <marquee scrollamount="25" behavior="alternate">
+    higgy bearthday tew yew &nbsp;•&nbsp;PLEASE HELP ME JACK IM STUCK IN STOREROOM &nbsp;•&nbsp; Please?
+  </marquee>
+
+  <p class="footer-text">
+    This right, that good, it ok... from <span id="fromSpan">B-Rad</span>.
+  </p>
+
+  <script>
+    // EDIT THESE TWO LINES:
+    const FRIEND_NAME = "JACK";
+    const FROM_NAME = "B-Rad";
+
+    // Put their name on the page
+    document.getElementById("nameSpan").textContent = FRIEND_NAME;
+    document.getElementById("fromSpan").textContent = FROM_NAME;
+
+    // Show popup after a tiny delay
+    setTimeout(() => {
+      document.getElementById("popup").classList.add("show");
+      setTimeout(() => {
+        document.getElementById("popup").classList.remove("show");
+      }, 4000);
+    }, 1000);
+
+    function unleashChaos() {
+      const messages = [
+        "HAPPY BIRTHDAY DUDE! - Wonderful wizard of DUFF🧙‍♂️",
+        "🎂 Wei goana birthday yew tew deaf - cagaroni 🎂",
+        "AGE STATUS: LOADING...",
+        "TWENTY JUAN",
+      ];
+
+      alert(messages[Math.floor(Math.random() * messages.length)]);
+
+      const chaosZone = document.getElementById("chaosZone");
+     const emojiSet = ["🧌","😭","👽","🖖"];
+
+      let chaos = "";
+      for (let i = 0; i < 50; i++) {
+        const e = emojiSet[Math.floor(Math.random() * emojiSet.length)];
+        chaos += e;
+        if (i % 10 === 0) chaos += "<br>";
+      }
+      chaosZone.innerHTML = chaos;
+    }
+  </script>
+</body>
+</html>
